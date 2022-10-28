@@ -21,10 +21,6 @@ if (!isset($_SESSION['carts'])) {
 	<?php include 'header.php'; ?>
 
 	<?php include 'config.php'; ?>
-
-
-
-
 	<div id="main">
 		<div id="products">
 		</div>
@@ -34,7 +30,7 @@ if (!isset($_SESSION['carts'])) {
 
 	</table>
 	<table id="table3"></table>
-	<!-- script start -->
+	<!-- Ajax script start -->
 	<script>
 		var p2 = <?php echo json_encode($products); ?>
 		// console.log(prod);
@@ -50,34 +46,32 @@ if (!isset($_SESSION['carts'])) {
 			});
 		}
 
-		function add(x) {
+		function add(x1) {
 
-			// alert("hello");
-			var y = x;
-			// console.log(y);
-			// alert(y);
+			
+			var y1 = x1;
+			
 			$.ajax({
 				url: "functions.php",
 				type: 'POST',
-				data: "x=" + y,
+				data: "x1=" + y1,
 				dataType: "json",
 			}).done(function(res) {
-				// json.parse(res);
+				
 				$("#pro").css('display', 'block');
 				display_cart(res);
 				console.log(res);
-				//  $("#table2").html(res);
+			
 			})
 		}
 
-		function del1(x) {
-			// console.log($m);
-			// alert("hello");
-			var y = x;
+		function del1(x1) {
+		
+			var y1 = x1;
 			$.ajax({
 				url: "functions11.php",
 				type: 'POST',
-				data: "x=" + y,
+				data: "x1=" + y1,
 				dataType: "json",
 			}).done(function(res420) {
 				console.log(res420);
@@ -90,12 +84,12 @@ if (!isset($_SESSION['carts'])) {
 		}
 
 		function plus(x1) {
-			var y = x1;
-			// console.log(y);
+			var y1 = x1;
+		
 			$.ajax({
 				url: "function12.php",
 				type: 'POST',
-				data: "x=" + y,
+				data: "x1=" + y1,
 				dataType: "json",
 			}).done(function(res420) {
 				console.log(res420);
@@ -104,12 +98,12 @@ if (!isset($_SESSION['carts'])) {
 		}
 
 		function del(x1) {
-			var y = x1;
-			// console.log(y);
+			var y1 = x1;
+			
 			$.ajax({
 				url: "function13.php",
 				type: 'POST',
-				data: "x=" + y,
+				data: "x1=" + y1,
 				dataType: "json",
 			}).done(function(res420) {
 				console.log(res420);
@@ -120,19 +114,19 @@ if (!isset($_SESSION['carts'])) {
 		}
 
 		function emptycart() {
-			// console.log(y);
+			
 			$.ajax({
 				url: "emptycart.php",
 				type: 'POST',
 				dataType: "json",
 			}).done(function(res420) {
-				// console.log(res420);
+			
 				display_cart(res420);
 			})
 		}
 
 		function display_cart(res) {
-			// alert("hello");
+		
 			var str1 = "";
 
 			if (res == []) {
@@ -147,6 +141,7 @@ if (!isset($_SESSION['carts'])) {
 			$("#table2").html(str1);
 		}
 	</script>
+	<!-- Ajax script end -->
 	<script src="script.js"></script>
 	<?php include 'footer.php'; ?>
 

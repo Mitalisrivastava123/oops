@@ -3,14 +3,12 @@
 <?php require_once('addcart.php'); ?>
 
 <?php
-if(isset($_POST['x']))
+
+if(isset($_POST['x1']))
 {
- $m1 = $_POST['x'];
- //echo $m1;
-$obj2 = new Cart();
+$m1 = $_POST['x1'];
+$obj2 = new Html\Cart();
 $obj2->function1($m1);
-
-
 }
 
 ?>

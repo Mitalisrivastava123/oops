@@ -1,14 +1,14 @@
 <?php
-
+namespace Html;
 if (!isset($_SESSION['carts'])) {
     $_SESSION['carts'] = [];
 }
 ?>
+
 <?php
-
-class Cart
+// created class cart with functions inside
+Class Cart
 {
-
     function function1($m1)
     {
         include 'config.php';
@@ -33,8 +33,6 @@ class Cart
         }
     echo json_encode($_SESSION['carts']); 
     }
-
-
     function function2($m1)
     {
 
@@ -55,8 +53,6 @@ class Cart
             }
 
         echo json_encode($_SESSION['carts']);
-
-
     }
     function function4($m1)
     {

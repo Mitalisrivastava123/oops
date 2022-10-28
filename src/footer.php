@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+	<!-- footer section start -->
 <div id="footer">
 		<nav>
 			<ul id="footer-links">
@@ -15,5 +16,6 @@
 			</ul>
 		</nav>
 	</div>
+	<!-- footer section end -->
 </body>
 </html>
