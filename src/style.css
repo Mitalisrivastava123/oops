@@ -143,4 +143,8 @@ body{
 	border-radius: 5px;
 	border: 1px solid #cccccc; 
 }
+table th
+{
+	border:1px solid black;
+}
 

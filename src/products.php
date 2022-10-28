@@ -26,7 +26,7 @@ if (!isset($_SESSION['carts'])) {
 		</div>
 	</div>
 	<h1 style="display:none;" id="pro">ADD To CART</h1>
-	<table id="table2" style="background:pink;border:1px solid black;">
+	<table id="table2" style="background:#c0dfff;border:1px solid black;">
 
 	</table>
 	<table id="table3"></table>
@@ -124,11 +124,11 @@ if (!isset($_SESSION['carts'])) {
 				display_cart(res420);
 			})
 		}
-
+           
 		function display_cart(res) {
 		
-			var str1 = "";
-
+			var str1 = "<table>";
+             str1+= "<tr><th>Id</th><th>Name</th><th>Image</th><th>Price</th><th><th><th><th>Quantity</th></tr>";
 			if (res == []) {
 				str1 = "";
 			} else {
